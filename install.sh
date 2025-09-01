@@ -14,12 +14,45 @@ echo "bb() {\n  rlwrap bb \"\$@\"\n}\n" >> ~/.zprofile
 brew install openjdk@21 jenv
 JDK_PREFIX=$(brew --prefix openjdk@21)
 sudo ln -sfn "$JDK_PREFIX/libexec/openjdk.jdk" /Library/Java/JavaVirtualMachines/openjdk-21.jdk
-echo 'export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="~/.jenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(jenv init -)"' >> ~/.zshrc
 mkdir -p ~/.jenv/versions
 jenv add "$(/usr/libexec/java_home -v 21)"
 
 # Clojure
 brew install clojure/tools/clojure
+
+# .NET
+brew install --cask dotnet-sdk
+echo "export PATH=\"\$PATH:$HOME/.dotnet/tools\"" >> ~/.zprofile
+export PATH="$PATH:$HOME/.dotnet/tools"
+echo "export DOTNET_CLI_TELEMETRY_OPTOUT=1" >> ~/.zshrc
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# Clojure CLR
+dotnet tool install --global Clojure.Main
+dotnet tool install --global Clojure.Cljr --version 0.1.0-alpha6
+
+# Docker
+brew install --cask docker
+
+# Claude Code
+brew install node
+npm install -g @anthropic-ai/claude-code
+
+# VSCodium
+brew install --cask vscodium
+
+# Slack
+brew install --cask slack
+
+# Spotify
+brew install --cask spotify
+
+# IntelliJ
+# Haven't tried this... might work?
+# brew install --cask intellij-idea
+echo 'export PATH="/Applications/Intellij IDEA.app/Contents/MacOS:$PATH"' >> ~/.zshrc
 
 # SSH
 ssh-keygen -t ed25519 -C $(whoami) -f ~/.ssh/id_ed25519 -N ""
@@ -49,5 +82,5 @@ brew install fvm
 fvm install stable
 fvm doctor
 fvm global stable
-echo "export PATH=\"\$PATH:$(echo ~/fvm/default/bin)\"" >> ~/.zshrc
+echo "export PATH=\"\$PATH:$HOME/fvm/default/bin)\"" >> ~/.zshrc
 fvm flutter doctor

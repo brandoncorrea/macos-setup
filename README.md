@@ -6,8 +6,12 @@ Some install scripts for a new macOS machine.
  * Clojure
  * Flutter / Dart / fenv
  * Babashka
+ * ClojureCLR
  * Datomic
  * Fresh SSH Keys
+ * VSCodium
+ * Docker
+ 
 
 ### Usage
 
