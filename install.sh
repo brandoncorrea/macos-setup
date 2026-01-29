@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Turn off wallpaper click behavior
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo >> ~/.zprofile
@@ -46,8 +49,11 @@ brew install --cask vscodium
 # Slack
 brew install --cask slack
 
-# Spotify
-brew install --cask spotify
+# Tuple
+brew install --cask tuple
+
+# Firefox
+brew install --cask firefox
 
 # IntelliJ
 # Haven't tried this... might work?
