@@ -11,8 +11,15 @@ Some install scripts for a new macOS machine.
  * Fresh SSH Keys
  * VSCodium
  * Docker
- 
+ * Tuple
+ * Firefox
+
 
 ### Usage
 
-    ./install.sh
+```bash
+curl -O https://raw.githubusercontent.com/brandoncorrea/macos-setup/refs/heads/master/install.sh
+chmod +x install.sh
+./install.sh
+rm install.sh
+```
