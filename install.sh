@@ -55,9 +55,14 @@ brew install --cask tuple
 # Firefox
 brew install --cask firefox
 
+# NordVPN
+brew install --cask nordvpn
+
+# Obsidian
+brew install --cask obsidian
+
 # IntelliJ
-# Haven't tried this... might work?
-# brew install --cask intellij-idea
+brew install --cask intellij-idea
 echo 'export PATH="/Applications/Intellij IDEA.app/Contents/MacOS:$PATH"' >> ~/.zshrc
 
 # SSH
