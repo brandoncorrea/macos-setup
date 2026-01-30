@@ -43,6 +43,10 @@ brew install --cask docker
 brew install node
 npm install -g @anthropic-ai/claude-code
 
+# Grok
+curl -fsSL https://bun.com/install | bash
+bun add -g @vibe-kit/grok-cli
+
 # VSCodium
 brew install --cask vscodium
 
