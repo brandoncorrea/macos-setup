@@ -65,6 +65,9 @@ brew install --cask nordvpn
 # Obsidian
 brew install --cask obsidian
 
+# Steam
+brew install --cask steam
+
 # IntelliJ
 brew install --cask intellij-idea
 echo 'export PATH="/Applications/Intellij IDEA.app/Contents/MacOS:$PATH"' >> ~/.zshrc
